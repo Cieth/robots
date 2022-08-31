@@ -1,0 +1,23 @@
+{
+  "name": "robots",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest /src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cieth/robots.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cieth/robots/issues"
+  },
+  "homepage": "https://github.com/Cieth/robots#readme",
+  "dependencies": {
+    "jest": "^29.0.1"
+  }
+}
