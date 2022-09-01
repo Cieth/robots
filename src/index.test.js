@@ -1,9 +1,15 @@
 const {createRobot} = require('./index.js');
 
 describe('Should be inside its limits ', ()=>{
-    it('should not go any further than [0,0] or [10,10]', ()=>{
+    it('should not go any further than [10,10]', ()=>{
         const {moveForward} = createRobot(5,10);
         expect(moveForward()).toBe("Out of bounds");
+    });
+    it('should not go below [0,0]', ()=>{
+        const {moveForward,turnLeft} = createRobot(1,1);
+        turnLeft(); //turn left <-
+        moveForward() // moves to 0 
+        expect(moveForward()).toBe("Out of bounds"); // one move forward means it's out of bounds
     });
 });
 
