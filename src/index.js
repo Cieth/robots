@@ -1,4 +1,4 @@
-createRobot = (a, b) => {
+exports.createRobot = (a, b) => {
     let x = a
     let y = b
     let facing = "N"    //Actual orientation of robot
@@ -16,7 +16,7 @@ createRobot = (a, b) => {
         else if (facing == "E") facing =  "N"
     }
     const moveForward = () =>{
-        if(x>0 && x<10 || y>0 && y<10){
+        if((x>0 && x<10) && (y>0 && y<10)){
             if(facing == "N" ) return y++;
             else if(facing == "E") return x++;
             else if(facing == "S") return y--;
@@ -36,15 +36,3 @@ createRobot = (a, b) => {
         getCoordsAndOrientation
     }
 }
-let {moveForward,turnLeft,turnRight, getCoordsAndOrientation} = createRobot(5,5);
-
-
-console.log(getCoordsAndOrientation());
-turnRight()
-moveForward();
-moveForward();
-moveForward();
-moveForward();
-moveForward();
-moveForward();
-console.log(getCoordsAndOrientation());
