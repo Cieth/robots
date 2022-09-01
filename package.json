@@ -17,7 +17,7 @@
     "url": "https://github.com/Cieth/robots/issues"
   },
   "homepage": "https://github.com/Cieth/robots#readme",
-  "dependencies": {
+  "devDependencies": {
     "jest": "^29.0.1"
   }
 }

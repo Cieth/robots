@@ -19,8 +19,8 @@ exports.createRobot = (x,y) => {
         if((x>0 && x<10) && (y>0 && y<10)){ //If it's inside the grid
             if(facing == "N" ) return ++y;
             else if(facing == "E") return ++x;
-            else if(facing == "S") return ++y;
-            else if(facing == "W") return ++x;
+            else if(facing == "S") return --y;
+            else if(facing == "W") return --x;
         }else{
             return "Out of bounds"          //if it's not
         }
@@ -35,4 +35,5 @@ exports.createRobot = (x,y) => {
         getCoordsAndOrientation //- Gets coordenates and orientation of the robot
     }
 }
+
 
