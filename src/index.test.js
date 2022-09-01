@@ -22,7 +22,7 @@ describe('Should rotate correctly', ()=>{
 describe('Should move forward', ()=>{
     it('should increment y value', ()=>{
         const {moveForward} = createRobot(5,5);
-        expect(moveForward()).toBe(5);
         expect(moveForward()).toBe(6);
+        expect(moveForward()).toBe(7);
     });
 });
