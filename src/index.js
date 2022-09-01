@@ -8,7 +8,6 @@ exports.createRobot = (x,y) => {
         else if (facing == "W") facing =  "N"
         return facing
     };
-    
     function turnLeft() {      // Changes orientation to the left based on the actual orientation 
         if (facing == "N") facing =  "W" 
         else if (facing == "W") facing =  "S"
@@ -16,13 +15,12 @@ exports.createRobot = (x,y) => {
         else if (facing == "E") facing =  "N"
         return facing
     };
-    
     const moveForward = () =>{
         if((x>0 && x<10) && (y>0 && y<10)){ //If it's inside the grid
-            if(facing == "N" ) return y++;
-            else if(facing == "E") return x++;
-            else if(facing == "S") return y--;
-            else if(facing == "W") return x--;
+            if(facing == "N" ) return ++y;
+            else if(facing == "E") return ++x;
+            else if(facing == "S") return ++y;
+            else if(facing == "W") return ++x;
         }else{
             return "Out of bounds"          //if it's not
         }
