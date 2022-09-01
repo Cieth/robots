@@ -1,6 +1,4 @@
-exports.createRobot = (a, b) => {
-    let x = a
-    let y = b
+exports.createRobot = (x,y) => {
     let facing = "N"    //Actual orientation of robot
 
     function turnRight() {     // Changes orientation to the rigth based on the actual orientation 
@@ -9,14 +7,16 @@ exports.createRobot = (a, b) => {
         else if (facing == "S") facing =  "W"
         else if (facing == "W") facing =  "N"
         return facing
-    }
+    };
+    
     function turnLeft() {      // Changes orientation to the left based on the actual orientation 
         if (facing == "N") facing =  "W" 
         else if (facing == "W") facing =  "S"
         else if (facing == "S") facing =  "E"
         else if (facing == "E") facing =  "N"
         return facing
-    }
+    };
+    
     const moveForward = () =>{
         if((x>0 && x<10) && (y>0 && y<10)){ //If it's inside the grid
             if(facing == "N" ) return y++;
@@ -37,3 +37,4 @@ exports.createRobot = (a, b) => {
         getCoordsAndOrientation //- Gets coordenates and orientation of the robot
     }
 }
+
